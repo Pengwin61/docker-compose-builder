@@ -1,0 +1,14 @@
+version: "3.4"
+services:
+  redis:
+    image: redis:2.8.23
+    ports:
+    - 6379:6379
+    container_name: ""
+    restart: ""
+    command: ""
+    environment: []
+    volumes: []
+    expose: []
+    depends_on: []
+    extra_hosts: []

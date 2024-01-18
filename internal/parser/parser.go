@@ -10,13 +10,13 @@ import (
 
 type DockerCompose struct {
 	Version  string
-	Services map[string]Service
+	Services map[string]*Service
 }
 
 type Service struct {
 	Image          string
-	Ports          []string
 	Container_Name string
+	Ports          []string
 	Restart        string
 	Command        string
 	Environment    []string

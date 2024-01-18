@@ -30,4 +30,5 @@ func WriteToFile(filepath *string) {
 func Print() {
 	fmt.Println("======================================")
 	fmt.Println(result)
+	fmt.Println("======================================")
 }

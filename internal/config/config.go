@@ -11,7 +11,6 @@ type Conf struct {
 }
 
 func InitConfig() Conf {
-
 	return getFlags()
 }
 

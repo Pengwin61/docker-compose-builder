@@ -12,11 +12,14 @@ func main() {
 
 	compose := parser.ComposeParser(conf)
 
-	composer := parser.Edit(compose)
-	parser.MarshalCompose(conf.FilePath, composer)
+	composer := parser.Edit(&compose)
+
+	//
+	parser.MarshalCompose(conf.FilePath, *composer)
 	parser.Print()
 
-	if getInput() == "yes" || getInput() == "y" {
+	confirm := getInput()
+	if confirm == "yes" || confirm == "y" {
 		parser.WriteToFile(conf.FilePath)
 	} else {
 		fmt.Println("Операция отменена")
